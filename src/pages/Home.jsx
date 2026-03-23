@@ -63,7 +63,7 @@ const Home = () => {
       <section className="relative min-h-screen lg:h-screen overflow-hidden flex flex-col premium-gradient">
         <div className="absolute top-0 right-0 w-[45%] h-full bg-gradient-to-l from-bone/30 to-transparent hidden lg:block"></div>
         <div className="absolute -bottom-20 -left-20 text-[20rem] font-black text-oak opacity-[0.015] select-none pointer-events-none tracking-tighter">SP</div>
-        <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-clay/[0.02] blur-3xl pointer-events-none hidden lg:block"></div>
+        <div className="absolute top-20 right-20 w-72 h-72 rounded-full bg-navy/[0.04] blur-3xl pointer-events-none hidden lg:block"></div>
 
         <div className="flex-1 flex mb-10 lg:items-center relative z-10 pt-28 lg:pt-20 pb-12 lg:pb-0">
           <div className="max-w-7xl mx-auto w-full px-6 lg:px-12">
@@ -78,7 +78,7 @@ const Home = () => {
                 </div>
                 <div className="relative mb-7 reveal" style={{ transitionDelay: "100ms" }}>
                   <h1 className="text-4xl lg:text-7xl font-black text-oak leading-[1.05] tracking-tighter">
-                    Dr. Sangieta 
+                    Dr. Sangieta
                     <span className="gradient-text ml-0 lg:ml-1 mr-3 relative">
                       Pande
                       <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-clay/40 to-transparent"></span>
@@ -119,7 +119,7 @@ const Home = () => {
                     <img src={profile} alt="Dr. Sangieta Pande" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-gradient-to-t from-oak/15 via-transparent to-transparent mix-blend-multiply"></div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ const Home = () => {
       </section>
 
       {/* SECTION 2: SNAPSHOT */}
-      <section className="relative min-h-screen lg:min-h-screen flex items-center overflow-hidden py-24 lg:py-32 premium-gradient-alt">
+      <section className="relative min-h-screen lg:min-h-screen flex items-center overflow-hidden py-24 lg:py-32 premium-gradient-alt bg-gradient-to-b from-transparent to-navy/[0.03]">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clay/10 to-transparent"></div>
         <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-clay/[0.02] blur-3xl pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
@@ -231,7 +231,7 @@ const Home = () => {
       {/* SECTION 5: RESEARCH & PUBLICATIONS */}
       <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-creme py-24 lg:py-32 premium-gradient">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clay/10 to-transparent"></div>
-        <div className="absolute top-40 left-20 w-64 h-64 rounded-full bg-clay/[0.015] blur-3xl pointer-events-none"></div>
+        <div className="absolute top-40 left-20 w-64 h-64 rounded-full bg-navy/[0.04] blur-3xl pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
 
@@ -297,106 +297,92 @@ const Home = () => {
       </section>
 
       {/* SECTION 6: BOOKS & AUTHORSHIP */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-gradient-to-br from-bone via-bone to-bone/80 py-24 lg:py-32">
+      <section className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-bone via-bone to-bone/80">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clay/10 to-transparent"></div>
-        <div className="absolute -top-20 left-1/3 w-80 h-80 rounded-full bg-clay/[0.02] blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 dot-pattern opacity-20 pointer-events-none hidden lg:block"></div>
+        <div className="absolute -top-20 left-1/3 w-80 h-80 rounded-full bg-navy/[0.03] blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12 w-full relative z-10">
+          <div className="text-center mb-20 lg:mb-28 reveal">
+            <h2 className="text-navy font-black tracking-[0.4em] uppercase text-sm lg:text-base mb-4">Books & Authorship</h2>
+            <h3 className="text-4xl lg:text-5xl font-black text-oak tracking-tighter leading-tight">
+              Written <span className="text-clay italic font-light">Works</span>
+            </h3>
+          </div>
 
-            {/* LEFT: All text content */}
-            <div className="lg:col-span-4 flex flex-col gap-6 reveal-left">
-              <div>
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="text-clay font-black text-2xl opacity-[0.32] tracking-tighter">06</span>
-                  <div className="h-[1.5px] w-10 bg-gradient-to-r from-clay/30 to-transparent"></div>
-                  <h2 className="text-clay font-black tracking-[0.4em] uppercase text-xs lg:text-sm">Written Works</h2>
-                </div>
-                <h3 className="text-3xl lg:text-5xl font-black text-oak tracking-tighter leading-tight mb-5">
-                  Books &<span className="text-clay italic font-light ml-2">Authorship</span>
-                </h3>
-                <div className="h-px w-full bg-gradient-to-r from-clay/15 to-transparent mb-5"></div>
-                <p className="text-oak/60 text-base lg:text-lg leading-[1.85] mb-4">
-                  Dr. Sangieta Pande is the author of multiple reflective and transformational works that explore leadership, balance, spirituality, and disciplined growth.
-                </p>
-              </div>
-              <p className="text-oak/40 text-sm lg:text-base italic leading-relaxed border-l-2 border-clay/20 pl-5">
-                Each book reflects a deep commitment to conscious living, ethical leadership, and inner resilience in a demanding modern world.
-              </p>
-            </div>
+          <div className="flex flex-col gap-24 lg:gap-32">
 
-            {/* RIGHT: Book Cards */}
-            <div className="lg:col-span-8 grid md:grid-cols-2 gap-5 lg:gap-6 stagger-children">
-
-              {/* Book Card 1 */}
-              <div className="premium-card group flex flex-col overflow-hidden">
-                {/* Image */}
-                <div className="relative overflow-hidden h-52 lg:h-64 shrink-0">
+            {/* BOOK 1 */}
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal-left">
+              {/* Image side - Left */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative w-64 lg:w-80 group">
+                  <div className="absolute inset-0 bg-navy/20 blur-2xl rounded-lg translate-y-8 translate-x-4 opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
                   <img
                     src={bookImage}
                     alt="The Middle Path to Greatness"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    className="relative w-full h-auto  shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-hover:scale-[1.02]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-oak/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <span className="absolute top-3 left-3 bg-clay/90 backdrop-blur-md text-creme text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg">
-                    Leadership
-                  </span>
-                </div>
-                {/* Info */}
-                <div className="p-5 lg:p-6 flex flex-col flex-1 gap-2">
-                  <p className="text-xs font-black uppercase tracking-widest text-clay/45">Book One · Leadership & Balance</p>
-                  <h4 className="text-lg lg:text-xl font-black text-oak tracking-tighter leading-snug group-hover:text-clay transition-colors duration-300">
-                    The Middle Path to Greatness
-                  </h4>
-                  <p className="text-oak/45 text-base italic">Balance, Not Burnout</p>
-                  <div className="mt-auto pt-4 border-t border-clay/[0.06]">
-                    <a
-                      href="https://www.amazon.in/dp/9371642149"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group/btn tilt-3d liquid-button inline-flex items-center gap-2 text-creme px-5 py-2.5 text-xs font-black uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay/40 focus-visible:ring-offset-2 focus-visible:ring-offset-creme"
-                    >
-                      <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" /> Buy on Amazon
-                    </a>
-                  </div>
                 </div>
               </div>
+              {/* Text side - Right */}
+              <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+                <h4 className="text-4xl lg:text-5xl font-black text-navy uppercase tracking-tight mb-4 leading-none">
+                  The Middle Path <br className="hidden lg:block" />to Greatness
+                </h4>
+                <p className="text-clay font-bold tracking-widest uppercase text-xs lg:text-sm mb-6">Leadership & Balance</p>
+                <p className="text-oak/75 text-base lg:text-lg leading-[1.85] mb-8 max-w-md">
+                  A reflective work exploring the delicate art of balancing ambition with well-being. This book is a guide for those seeking greatness without the cost of burnout, advocating for a sustainable, values-driven path to leadership.
+                </p>
+                <div className="mb-10">
+                  <p className="font-serif text-2xl lg:text-3xl text-oak/70 italic">Sangieta Pande</p>
+                </div>
+                <a
+                  href="https://www.amazon.in/dp/9371642149"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 bg-clay text-creme px-8 py-4 rounded font-black text-sm tracking-widest uppercase hover:bg-navy transition-colors shadow-lg hover:shadow-xl transform duration-300"
+                >
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Buy On Amazon
+                </a>
+              </div>
+            </div>
 
-              {/* Book Card 2 */}
-              <div className="premium-card group flex flex-col overflow-hidden">
-                {/* Image */}
-                <div className="relative overflow-hidden h-52 lg:h-64 shrink-0">
+            {/* BOOK 2 */}
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center reveal-right">
+              {/* Text side - Left (Mobile Order 2, Desktop Order 1) */}
+              <div className="flex flex-col items-center lg:items-end text-center lg:text-right order-2 lg:order-1">
+                <h4 className="text-4xl lg:text-5xl font-black text-navy uppercase tracking-tight mb-4 leading-none">
+                  Hanuman: <br className="hidden lg:block" />The Warrior of My Soul
+                </h4>
+                <p className="text-clay font-bold tracking-widest uppercase text-xs lg:text-sm mb-6">Spirituality & Devotion</p>
+                <p className="text-oak/75 text-base lg:text-lg leading-[1.85] mb-8 max-w-md">
+                  A journey into spiritual devotion, courage, and resilience. This book bridges ancient wisdom with modern challenges, drawing strength from the eternal archetype of profound faith and disciplined action.
+                </p>
+                <div className="mb-10 block">
+                  <p className="font-serif text-2xl lg:text-3xl text-oak/70 italic">Sangieta Pande</p>
+                </div>
+                <a
+                  href="https://amzn.in/d/0cgaH6lw"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group inline-flex items-center gap-3 bg-clay text-creme px-8 py-4 rounded font-black text-sm tracking-widest uppercase hover:bg-navy transition-colors shadow-lg hover:shadow-xl transform duration-300"
+                >
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> Buy On Amazon
+                </a>
+              </div>
+              {/* Image side - Right (Mobile Order 1, Desktop Order 2) */}
+              <div className="flex justify-center lg:justify-start order-1 lg:order-2">
+                <div className="relative w-64 lg:w-80 group">
+                  <div className="absolute inset-0 bg-navy/20 blur-2xl rounded-lg translate-y-8 -translate-x-4 opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
                   <img
                     src={hanumanImage}
                     alt="Hanuman: The Warrior of My Soul"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    className="relative w-full h-auto  shadow-2xl transition-transform duration-700 group-hover:-translate-y-2 group-hover:scale-[1.02]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-oak/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <span className="absolute top-3 left-3 bg-oak/70 backdrop-blur-md text-creme text-xs font-black uppercase tracking-widest px-3.5 py-1.5 rounded-lg">
-                    Spiritual
-                  </span>
-                </div>
-                {/* Info */}
-                <div className="p-5 lg:p-6 flex flex-col flex-1 gap-2">
-                  <p className="text-xs font-black uppercase tracking-widest text-clay/45">Book Two · Spirituality & Devotion</p>
-                  <h4 className="text-lg lg:text-xl font-black text-oak tracking-tighter leading-snug group-hover:text-clay transition-colors duration-300">
-                    Hanuman: The Warrior of My Soul
-                  </h4>
-                  <p className="text-oak/45 text-base italic">Devotion, Courage & Resilience</p>
-                  <div className="mt-auto pt-4 border-t border-clay/[0.06]">
-                    <a
-                      href="https://amzn.in/d/0cgaH6lw"
-                      target="_blank"
-                      className="group/btn tilt-3d liquid-button-outline inline-flex items-center gap-2 text-clay hover:bg-clay hover:text-oak transition-colors px-5 py-2.5 text-xs font-black uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay/40 focus-visible:ring-offset-2 focus-visible:ring-offset-creme"
-                    >
-                      <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" /> Buy On Amazon
-                    </a>
-                  </div>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-clay/10 to-transparent"></div>
@@ -513,10 +499,10 @@ const Home = () => {
       </section>
 
       {/* SECTION 9: FINAL CALL TO ACTION */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-clay via-clay to-oak/80 text-creme text-center">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-navy via-[#324572] to-oak/80 text-creme text-center">
         {/* Decorative background number */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <span className="text-[28rem] font-black text-creme/[0.02] tracking-tighter leading-none">09</span>
+          <span className="text-[28rem] font-black text-creme/[0.04] tracking-tighter leading-none">09</span>
         </div>
 
         {/* Ambient glow */}
@@ -549,7 +535,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 reveal" style={{ transitionDelay: "300ms" }}>
             <a
               href="mailto:drsangieta.pande@gmail.com"
-              className="group/btn tilt-3d glass-surface-strong glass-border-gradient inline-flex items-center gap-3 text-clay px-8 py-4 text-sm font-black uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-creme/40 focus-visible:ring-offset-2 focus-visible:ring-offset-clay"
+              className="group/btn tilt-3d glass-surface-strong glass-border-gradient inline-flex items-center gap-3 text-navy px-8 py-4 text-sm font-black uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-creme/40 focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               Contact
@@ -558,7 +544,7 @@ const Home = () => {
               href="https://www.linkedin.com/in/dr-sangieta-pande-00757b1a1/"
               target="_blank"
               rel="noreferrer"
-              className="group/btn tilt-3d liquid-button-outline inline-flex items-center gap-3 text-creme/80 hover:text-creme transition-colors px-8 py-4 text-sm font-black uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-creme/40 focus-visible:ring-offset-2 focus-visible:ring-offset-clay"
+              className="group/btn tilt-3d liquid-button-outline inline-flex items-center gap-3 text-creme/80 hover:text-creme transition-colors px-8 py-4 text-sm font-black uppercase tracking-widest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-creme/40 focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               <Sparkles className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" />
               LinkedIn

@@ -8,10 +8,11 @@ import event1 from "../assets/event1.png";
 
 export const navItems = [
   { label: "Home", href: "/home" },
-  { label: "Book", href: "#book" },
-  { label: "Services", href: "#services" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Events", href: "#events" },
+  { label: "Book", href: "/home#book" },
+  { label: "Services", href: "/home#services" },
+  { label: "Testimonials", href: "/home#testimonials" },
+  { label: "Events", href: "/home#events" },
+  { label: "Gallery", href: "/gallery" },
 ];
 
 export const testimonials = [

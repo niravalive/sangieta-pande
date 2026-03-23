@@ -1,10 +1,46 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import logo from "../assets/logo.png";
 
 export default function FooterSection() {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle");
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus("loading");
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/niravchadhary14@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: "New Newsletter Subscriber!"
+        })
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setEmail("");
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -52,9 +88,40 @@ export default function FooterSection() {
             </div>
           </div>
 
-          <p className="text-oak/85 text-sm lg:text-base italic font-normal tracking-wide max-w-xl text-center md:text-right">
-            "Education, ethics, and reflection are the foundations of meaningful leadership."
-          </p>
+          <div className="flex flex-col items-center md:items-end gap-1 w-full md:w-auto mt-6 md:mt-0 flex-1">
+            <h4 className="text-navy font-bold tracking-widest uppercase text-2xl mr-4 mb-2">Subscribe For NewsLetter</h4>
+            <form className="relative flex items-center w-full max-w-md" onSubmit={handleSubscribe}>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+                disabled={status === "loading" || status === "success"}
+                className="w-full bg-creme/50 border border-clay/30 rounded-full py-3.5 pl-6 pr-14 text-oak focus:outline-none focus:border-navy/50 focus:ring-1 focus:ring-navy/50 transition-all placeholder:text-oak/40 shadow-inner disabled:opacity-70"
+              />
+              <button
+                type="submit"
+                disabled={status === "loading" || status === "success"}
+                className={`absolute right-1.5 p-2.5 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2 focus:ring-offset-bone shadow-md disabled:opacity-80 flex items-center justify-center
+                  ${status === 'success' ? 'bg-green-600 text-white hover:bg-green-700' : 'bg-navy text-creme hover:bg-clay hover:shadow-lg'}
+                `}
+                aria-label="Subscribe"
+              >
+                {status === "loading" ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : status === "success" ? (
+                  <CheckCircle2 className="w-4 h-4" />
+                ) : (
+                  <ArrowRight className="w-4 h-4" />
+                )}
+              </button>
+            </form>
+            <div className="h-4 mt-1">
+              {status === "success" && <p className="text-green-600 text-xs font-semibold tracking-wide">Successfully subscribed!</p>}
+              {status === "error" && <p className="text-red-500 text-xs font-semibold tracking-wide">Something went wrong. Please try again.</p>}
+            </div>
+          </div>
         </div>
 
         {/* Divider with gradient */}
